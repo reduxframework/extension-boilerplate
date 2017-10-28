@@ -29,7 +29,7 @@ if( !class_exists( 'ReduxFramework_custom_field' ) ) {
      *
      * @since       1.0.0
      */
-    class ReduxFramework_custom_field extends ReduxFramework {
+    class ReduxFramework_custom_field {
     
         /**
          * Field Constructor.
@@ -90,9 +90,6 @@ if( !class_exists( 'ReduxFramework_custom_field' ) ) {
          * @return      void
          */
         public function enqueue() {
-
-            $extension = ReduxFramework_extension_custom_field::getInstance();
-        
             wp_enqueue_script(
                 'redux-field-icon-select-js', 
                 $this->extension_url . 'field_custom_field.js', 
